@@ -1,0 +1,304 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(240, 10%, 3.9%);
+  --muted: hsl(240, 4.8%, 95.9%);
+  --muted-foreground: hsl(240, 3.7%, 60%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(240, 10%, 3.9%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(240, 10%, 3.9%);
+  --border: hsl(240, 5.9%, 90%);
+  --input: hsl(240, 5.9%, 90%);
+  --primary: hsl(267, 66%, 66%);
+  --primary-foreground: hsl(0, 0%, 98%);
+  --secondary: hsl(240, 4.8%, 95.9%);
+  --secondary-foreground: hsl(240, 5.9%, 10%);
+  --accent: hsl(240, 4.8%, 95.9%);
+  --accent-foreground: hsl(240, 5.9%, 10%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 5%, 64.9%);
+  --radius: 0.5rem;
+  
+  /* Talkdesk brand colors */
+  --talkdesk-50: hsl(248, 100%, 98%);
+  --talkdesk-100: hsl(247, 91%, 95%);
+  --talkdesk-200: hsl(246, 84%, 89%);
+  --talkdesk-300: hsl(245, 81%, 80%);
+  --talkdesk-400: hsl(244, 77%, 70%);
+  --talkdesk-500: hsl(267, 66%, 66%);
+  --talkdesk-600: hsl(245, 58%, 51%);
+  --talkdesk-700: hsl(243, 54%, 41%);
+  --talkdesk-800: hsl(242, 47%, 34%);
+  --talkdesk-900: hsl(240, 39%, 28%);
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(267, 66%, 66%);
+  --primary-foreground: hsl(0, 0%, 98%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .talkdesk-50 {
+    background-color: var(--talkdesk-50);
+  }
+  
+  /* Line clamp utility */
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .talkdesk-100 {
+    background-color: var(--talkdesk-100);
+  }
+  .talkdesk-200 {
+    background-color: var(--talkdesk-200);
+  }
+  .talkdesk-300 {
+    background-color: var(--talkdesk-300);
+  }
+  .talkdesk-400 {
+    background-color: var(--talkdesk-400);
+  }
+  .talkdesk-500 {
+    background-color: var(--talkdesk-500);
+  }
+  .talkdesk-600 {
+    background-color: var(--talkdesk-600);
+  }
+  .talkdesk-700 {
+    background-color: var(--talkdesk-700);
+  }
+  .talkdesk-800 {
+    background-color: var(--talkdesk-800);
+  }
+  .talkdesk-900 {
+    background-color: var(--talkdesk-900);
+  }
+  
+  .bg-talkdesk-50 {
+    background-color: var(--talkdesk-50);
+  }
+  .bg-talkdesk-100 {
+    background-color: var(--talkdesk-100);
+  }
+  .bg-talkdesk-200 {
+    background-color: var(--talkdesk-200);
+  }
+  .bg-talkdesk-300 {
+    background-color: var(--talkdesk-300);
+  }
+  .bg-talkdesk-400 {
+    background-color: var(--talkdesk-400);
+  }
+  .bg-talkdesk-500 {
+    background-color: var(--talkdesk-500);
+  }
+  .bg-talkdesk-600 {
+    background-color: var(--talkdesk-600);
+  }
+  .bg-talkdesk-700 {
+    background-color: var(--talkdesk-700);
+  }
+  .bg-talkdesk-800 {
+    background-color: var(--talkdesk-800);
+  }
+  .bg-talkdesk-900 {
+    background-color: var(--talkdesk-900);
+  }
+  
+  .text-talkdesk-50 {
+    color: var(--talkdesk-50);
+  }
+  .text-talkdesk-100 {
+    color: var(--talkdesk-100);
+  }
+  .text-talkdesk-200 {
+    color: var(--talkdesk-200);
+  }
+  .text-talkdesk-300 {
+    color: var(--talkdesk-300);
+  }
+  .text-talkdesk-400 {
+    color: var(--talkdesk-400);
+  }
+  .text-talkdesk-500 {
+    color: var(--talkdesk-500);
+  }
+  .text-talkdesk-600 {
+    color: var(--talkdesk-600);
+  }
+  .text-talkdesk-700 {
+    color: var(--talkdesk-700);
+  }
+  .text-talkdesk-800 {
+    color: var(--talkdesk-800);
+  }
+  .text-talkdesk-900 {
+    color: var(--talkdesk-900);
+  }
+  
+  .border-talkdesk-50 {
+    border-color: var(--talkdesk-50);
+  }
+  .border-talkdesk-100 {
+    border-color: var(--talkdesk-100);
+  }
+  .border-talkdesk-200 {
+    border-color: var(--talkdesk-200);
+  }
+  .border-talkdesk-300 {
+    border-color: var(--talkdesk-300);
+  }
+  .border-talkdesk-400 {
+    border-color: var(--talkdesk-400);
+  }
+  .border-talkdesk-500 {
+    border-color: var(--talkdesk-500);
+  }
+  .border-talkdesk-600 {
+    border-color: var(--talkdesk-600);
+  }
+  .border-talkdesk-700 {
+    border-color: var(--talkdesk-700);
+  }
+  .border-talkdesk-800 {
+    border-color: var(--talkdesk-800);
+  }
+  .border-talkdesk-900 {
+    border-color: var(--talkdesk-900);
+  }
+  
+  .hover\:bg-talkdesk-50:hover {
+    background-color: var(--talkdesk-50);
+  }
+  .hover\:bg-talkdesk-100:hover {
+    background-color: var(--talkdesk-100);
+  }
+  .hover\:bg-talkdesk-200:hover {
+    background-color: var(--talkdesk-200);
+  }
+  .hover\:bg-talkdesk-300:hover {
+    background-color: var(--talkdesk-300);
+  }
+  .hover\:bg-talkdesk-400:hover {
+    background-color: var(--talkdesk-400);
+  }
+  .hover\:bg-talkdesk-500:hover {
+    background-color: var(--talkdesk-500);
+  }
+  .hover\:bg-talkdesk-600:hover {
+    background-color: var(--talkdesk-600);
+  }
+  .hover\:bg-talkdesk-700:hover {
+    background-color: var(--talkdesk-700);
+  }
+  .hover\:bg-talkdesk-800:hover {
+    background-color: var(--talkdesk-800);
+  }
+  .hover\:bg-talkdesk-900:hover {
+    background-color: var(--talkdesk-900);
+  }
+  
+  .hover\:text-talkdesk-50:hover {
+    color: var(--talkdesk-50);
+  }
+  .hover\:text-talkdesk-100:hover {
+    color: var(--talkdesk-100);
+  }
+  .hover\:text-talkdesk-200:hover {
+    color: var(--talkdesk-200);
+  }
+  .hover\:text-talkdesk-300:hover {
+    color: var(--talkdesk-300);
+  }
+  .hover\:text-talkdesk-400:hover {
+    color: var(--talkdesk-400);
+  }
+  .hover\:text-talkdesk-500:hover {
+    color: var(--talkdesk-500);
+  }
+  .hover\:text-talkdesk-600:hover {
+    color: var(--talkdesk-600);
+  }
+  .hover\:text-talkdesk-700:hover {
+    color: var(--talkdesk-700);
+  }
+  .hover\:text-talkdesk-800:hover {
+    color: var(--talkdesk-800);
+  }
+  .hover\:text-talkdesk-900:hover {
+    color: var(--talkdesk-900);
+  }
+  
+  .hover\:border-talkdesk-50:hover {
+    border-color: var(--talkdesk-50);
+  }
+  .hover\:border-talkdesk-100:hover {
+    border-color: var(--talkdesk-100);
+  }
+  .hover\:border-talkdesk-200:hover {
+    border-color: var(--talkdesk-200);
+  }
+  .hover\:border-talkdesk-300:hover {
+    border-color: var(--talkdesk-300);
+  }
+  .hover\:border-talkdesk-400:hover {
+    border-color: var(--talkdesk-400);
+  }
+  .hover\:border-talkdesk-500:hover {
+    border-color: var(--talkdesk-500);
+  }
+  .hover\:border-talkdesk-600:hover {
+    border-color: var(--talkdesk-600);
+  }
+  .hover\:border-talkdesk-700:hover {
+    border-color: var(--talkdesk-700);
+  }
+  .hover\:border-talkdesk-800:hover {
+    border-color: var(--talkdesk-800);
+  }
+  .hover\:border-talkdesk-900:hover {
+    border-color: var(--talkdesk-900);
+  }
+}
